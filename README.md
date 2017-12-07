@@ -26,12 +26,26 @@ The main method is getTimeOfOurDateUnit();
  - Maven
  - Gradle
 
+## To build this application
+From command line:
+
+- Maven:
+		mvn clean install
+
+- Gradle:
+		./gradlew build
+	
+From eclipse, you can also run it from Sprin Boot (You need to have STS plugin)
+	 
 ## To run this application
 
-Using __Embedded Apache Tomcat__:
+Eiether you can run it from Maven in the folder you have the project:
 
 	mvn spring-boot:run
 
+Or you can run it from Gradle:
+
+	./gradlew run
 You can then access the sample here: [http://localhost:8080/](http://localhost:8080/)
 
 To load from file, you have to use Ecnode URL. For instance, using %5C instead of /: as an example:
