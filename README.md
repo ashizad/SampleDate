@@ -40,7 +40,7 @@ http://localhost:8080/file/path?path=c:%5CAsh%5CProjects%5Csrc%5Cmain%5Cresource
 
 To load from standard input, you can type in like this path. Just bear in mind, if you have any special characters, you must encode them:
 
-http://localhost:8080/input?input=20+11+1980,+28+10+1990 
+http://localhost:8080/input?input=20 11 1980, 28 10 1990 
 
 You also can use curl to test REST API, for instance:
 
