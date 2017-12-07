@@ -2,20 +2,22 @@
 ===================
 Calculate the difference between two dates
 
-I have been using Spring Boot and you can run it from both Maven or Gradle.
+I have been using Spring Boot and you can run it from both Maven and Gradle.
 
-To mock some test cases I have been using Mockito, however, I believe Spock is better in large application.
+To mock some test cases I have been using Mockito, however, I believe Spock is better in large application (as part of Integration testing). 
 
 
 overview of the selected solution
 ===================
 To calculate the date difference, I have to analyse and do reverse engineering of the current Java Date and LocalDateTime  classes to understand different algorithms of Date.
-I found that calculating based on time (milisec) is better approach for this project as we don't consider daylight saving and other options in our task.
+I found that calculating based on time (milisec) is better approach for this project as I don't consider daylight saving and other options in our task.
 
-I have added all related methods (To get milisec for our date) into DateUnit.java, however, It's better to make them separate into another class. For now, I left them in this class.
+I calculate each DateUnit object based on milisec and then I subtract them from each other. The result returns time since 1970 in milliseconds, so the difference is also in milliseconds. 1000 milliseconds make 1 second, 60 seconds make 1 minute, 60 minutes make 1 hour and 24 hours make 1 day, as a result I have have to divide with milisec to get days amount:
+long diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+I have added all related methods (To get milisec for our date) into DateUnit.java, however, It's better off to make them in a separate class. For now, I left them in this class.
 
 The main method is getTimeOfOurDateUnit();
-
 
 
 ## Technology stack
