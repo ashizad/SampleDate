@@ -42,7 +42,8 @@ To load from standard input, you can type in like this path. Just bear in mind, 
 
 http://localhost:8080/input?input=20+11+1980,+28+10+1990 
 
-
+You also can use curl to test REST API, for instance:
+   curl localhost:8080/file/path?path=K:%5CAsh%5CProjects%5CSampleDate%5Csrc%5Cmain%5Cresources%5Csample.txt
 
 ## Unit Test
 There are almost 25 test cases for this project.
