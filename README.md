@@ -27,14 +27,15 @@ The main method is getTimeOfOurDateUnit();
  - Gradle
 
 ## To build this application
-From command line:
+From command line Maven::
 
-- Maven:
-		mvn clean install
+	mvn clean install
 
-- Gradle:
-		./gradlew build
-	
+Or Gradle:
+
+	./gradlew build
+
+
 From eclipse, you can also run it from Sprin Boot (You need to have STS plugin)
 	 
 ## To run this application
